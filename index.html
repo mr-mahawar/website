@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowd4Test</title>
+    <link rel="shortcut icon" type="image/jpg" href=""/>
+    <!-- <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=google.com"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <!-- Side Menu -->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Crowd4Test</header>
+        <ul>
+            <li><a href=""><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+            <li><a href=""><i class="fas fa-project-diagram"></i>Projetcs</a></li>
+            <li><a href=""><i class="fas fa-bug"></i>Reports</a></li>
+            <li><a href=""><i class="fas fa-certificate"></i>Contests</a></li>
+            <li><a href=""><i class="far fa-id-card"></i>Managers</a></li>
+            <li><a href=""><i class="fas fa-warehouse"></i>Organisations</a></li>
+            <li><a href=""><i class="fas fa-people-arrows"></i>Crowd Testers</a></li>
+            <li><a href=""><i class="fas fa-tablet-alt"></i>Devices</a></li>
+            <li><a href=""><i class="fab fa-chrome"></i>Browsers</a></li>
+            <li><a href=""><i class="fas fa-receipt"></i>Transactions</a></li>
+            <li><a href=""><i class="far fa-comments"></i>Communication</a></li>
+        </ul>
+    </div>
+    <section>
+        <div class="user">
+            <ul>
+                <li><a href="">Messages</a></li>
+                <li>
+                    <i class="fas fa-user-circle"></i>
+                    <a href="">Admin</a>
+                    <i class="fas fa-chevron-down" id="dropDownBtn"></i>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">My Account</a>
+                        <a href="#">Log Out</a>
+                      </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="organisations content-items">
+                <div class="left">
+                    <span id="orangisations-no">198</span>
+                    <h2>Organisations</h2>
+                </div>
+                <i class="far fa-building"></i>
+            </div>
+            <div class="testers content-items">
+                <div class="left">
+                    <span id="testers-no">5211</span>
+                    <h2>Testers</h2>
+                </div>
+                <i class="fas fa-user-astronaut"></i>
+            </div>
+            <div class="total-projects content-items">
+                <div class="left">
+                    <span id="projects-no">206</span>
+                    <h2>Total Projects</h2>
+                </div>
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="outstanding content-items">
+                <div class="left">
+                    <span id="outstanding-no">₹ 66,781 - $ 1,658</span>
+                    <h2>Outstandings</h2>
+                </div>
+                <i class="fas fa-money-bill"></i>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <div class="map" id="map">
+                
+            </div>
+            <div class="countries">
+                <ul>
+                    <li><a href="">Afganisthan <span>2</span></a></li>
+                    <li><a href="">Albania <span>10</span></a></li>
+                    <li><a href="">Algeria <span>8</span></a></li>
+                    <li><a href="">Anguilla <span>6</span></a></li>
+                    <li><a href="">Argentina <span>14</span></a></li>
+                    <li><a href="">Armenia <span>2</span></a></li>
+                    <li><a href="">Australia <span>9</span></a></li>
+                    <li><a href="">Austria <span>18</span></a></li>
+                    <li><a href="">Bahamas <span>5</span></a></li>
+                    <li><a href="">Bangladesh <span>1</span></a></li>
+                    <li><a href="">Belgium <span>7</span></a></li>
+                    <li><a href="">Bhutan <span>10</span></a></li>
+                    <li><a href="">Brazil <span>7</span></a></li>
+                    <li><a href="">Bulgaria <span>0</span></a></li>
+                    <li><a href="">Cambodia <span>16</span></a></li>
+                    <li><a href="">Canada <span>1</span></a></li>
+                    <li><a href="">Chile <span>12</span></a></li>
+                    <li><a href="">Costa Rica <span>0</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <div class="browsers-container">
+                <canvas id="browsers"></canvas>
+            </div>
+            <div class="os-container">
+                <canvas id="os" width="50%"></canvas>
+            </div>
+        </div>
+
+        <div class="companies-section">
+            <canvas id="companies" height="200px"></canvas>
+        </div>
+
+        <div class="demography">
+            <div class="gender-section">
+                <canvas id="gender" height="230px"></canvas>
+            </div>
+            <div class="age-section">
+                <canvas id="age" height="240px"></canvas>
+            </div>
+        </div>
+
+        <div class="performance-section">
+            <canvas id="performance" height="100px"></canvas>
+        </div>
+    </section>
+
+    <!-- Script -->
+    <script src = "script.js"></script>
+</body>
+</html>
