@@ -9,6 +9,7 @@
     <!-- <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=google.com"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
@@ -52,28 +53,28 @@
         </div>
 
         <div class="content">
-            <div class="organisations content-items">
+            <div class="organisations content-items" data-aos="fade-right" data-aos-delay="100">
                 <div class="left">
                     <span id="orangisations-no">198</span>
                     <h2>Organisations</h2>
                 </div>
                 <i class="far fa-building"></i>
             </div>
-            <div class="testers content-items">
+            <div class="testers content-items" data-aos="fade-right" data-aos-delay="300">
                 <div class="left">
                     <span id="testers-no">5211</span>
                     <h2>Testers</h2>
                 </div>
                 <i class="fas fa-user-astronaut"></i>
             </div>
-            <div class="total-projects content-items">
+            <div class="total-projects content-items" data-aos="fade-right" data-aos-delay="500">
                 <div class="left">
                     <span id="projects-no">206</span>
                     <h2>Total Projects</h2>
                 </div>
                 <i class="fas fa-project-diagram"></i>
             </div>
-            <div class="outstanding content-items">
+            <div class="outstanding content-items" data-aos="fade-right" data-aos-delay="700">
                 <div class="left">
                     <span id="outstanding-no">₹ 66,781 - $ 1,658</span>
                     <h2>Outstandings</h2>
@@ -83,10 +84,20 @@
         </div>
 
         <div class="map-section">
-            <div class="map" id="map">
+            <div class="map" id="map"
+            data-aos="fade-right"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500"
+            >
                 
             </div>
-            <div class="countries">
+            <div class="countries"
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500"
+            >
                 <ul>
                     <li><a href="">Afganisthan <span>2</span></a></li>
                     <li><a href="">Albania <span>10</span></a></li>
@@ -110,7 +121,7 @@
             </div>
         </div>
 
-        <div class="chart-section">
+        <div class="chart-section" data-aos="zoom-in-up">
             <div class="browsers-container">
                 <canvas id="browsers"></canvas>
             </div>
@@ -119,25 +130,34 @@
             </div>
         </div>
 
-        <div class="companies-section">
+        <div class="companies-section" data-aos="fade-in">
             <canvas id="companies" height="200px"></canvas>
         </div>
 
         <div class="demography">
-            <div class="gender-section">
+            <div class="gender-section" data-aos="zoom-out-right">
                 <canvas id="gender" height="230px"></canvas>
             </div>
-            <div class="age-section">
+            <div class="age-section" data-aos="zoom-out-left">
                 <canvas id="age" height="240px"></canvas>
             </div>
         </div>
 
-        <div class="performance-section">
+        <div class="performance-section" data-aos="fade-in">
             <canvas id="performance" height="100px"></canvas>
         </div>
     </section>
 
     <!-- Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+          delay: 200, // values from 0 to 3000, with step 50ms
+          duration: 1500, // values from 0 to 3000, with step 50ms
+          once: false, // whether animation should happen only once - while scrolling down
+          mirror: false, // whether elements should animate out while scrolling past them
+        });
+      </script>
     <script src = "script.js"></script>
 </body>
 </html>

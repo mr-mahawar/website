@@ -1,3 +1,4 @@
+AOS.init();
 const dropDownBtn = document.getElementById('dropDownBtn');
 
 let browsers = document.getElementById('browsers').getContext('2d');
@@ -260,5 +261,6 @@ window.onclick = function(event) {
       }
     }
   }
+
 
 dropDownBtn.addEventListener('click', myFunction);
